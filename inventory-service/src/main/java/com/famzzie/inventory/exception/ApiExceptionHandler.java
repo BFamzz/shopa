@@ -2,6 +2,7 @@ package com.famzzie.inventory.exception;
 
 import com.famzzie.exception.ApiException;
 import com.famzzie.inventory.exception.types.InvalidInventoryQuantityException;
+import com.famzzie.inventory.exception.types.InvalidPaginationParamException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,6 +16,14 @@ public class ApiExceptionHandler {
     @ExceptionHandler(value = InvalidInventoryQuantityException.class)
     public ResponseEntity<ApiException> invalidInventoryQuantityException(
             InvalidInventoryQuantityException exception) {
+        ApiException apiException = new ApiException(false, exception.getMessage());
+        log.error(exception.getMessage());
+        return new ResponseEntity<>(apiException, HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(value = InvalidPaginationParamException.class)
+    public ResponseEntity<ApiException> invalidPaginationParamException(
+            InvalidPaginationParamException exception) {
         ApiException apiException = new ApiException(false, exception.getMessage());
         log.error(exception.getMessage());
         return new ResponseEntity<>(apiException, HttpStatus.BAD_REQUEST);
