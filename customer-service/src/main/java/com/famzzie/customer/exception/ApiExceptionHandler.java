@@ -1,5 +1,6 @@
 package com.famzzie.customer.exception;
 
+import com.famzzie.customer.exception.types.CustomerNotFoundException;
 import com.famzzie.customer.exception.types.InvalidRequestBodyException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,5 +16,12 @@ public class ApiExceptionHandler {
         ApiException apiException = new ApiException(Boolean.FALSE, exception.getMessage(), exception,
                 ZonedDateTime.now());
         return new ResponseEntity<>(apiException, HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(value = CustomerNotFoundException.class)
+    public ResponseEntity<ApiException> invalidRequestBodyException(CustomerNotFoundException exception) {
+        ApiException apiException = new ApiException(Boolean.FALSE, exception.getMessage(), exception,
+                ZonedDateTime.now());
+        return new ResponseEntity<>(apiException, HttpStatus.NOT_FOUND);
     }
 }

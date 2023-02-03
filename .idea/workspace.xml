@@ -4,36 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62ad38aa-38a7-430f-90de-c258fa24ca3f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cart-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cart-service/src/main/java/com/famzzie/cart/CartService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cart-service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog-service/src/main/java/com/famzzie/catalog/CatalogService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog-service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer-service/src/main/java/com/famzzie/customer/CustomerServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer-service/src/main/java/com/famzzie/customer/api/CustomerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer-service/src/main/java/com/famzzie/customer/api/request/CreateCustomerRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer-service/src/main/java/com/famzzie/customer/api/response/CreateCustomerResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer-service/src/main/java/com/famzzie/customer/entity/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer-service/src/main/java/com/famzzie/customer/interfaces/CustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer-service/src/main/java/com/famzzie/customer/repository/CustomerRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer-service/src/main/java/com/famzzie/customer/service/CustomerServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer-service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/famzzie/inventory/InventoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/famzzie/order/OrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="62ad38aa-38a7-430f-90de-c258fa24ca3f" name="Changes" comment="Validate create customer request data">
+      <change afterPath="$PROJECT_DIR$/customer-service/src/main/java/com/famzzie/customer/api/response/GetCustomerResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer-service/src/main/java/com/famzzie/customer/exception/types/CustomerNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/com/famzzie/customer/api/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/com/famzzie/customer/api/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/com/famzzie/customer/entity/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/com/famzzie/customer/entity/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/com/famzzie/customer/interfaces/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/com/famzzie/customer/interfaces/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/com/famzzie/customer/service/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/com/famzzie/customer/service/CustomerServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,9 +24,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Record" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -79,7 +57,6 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "19",
     "node.js.detected.package.eslint": "true",
@@ -193,8 +170,30 @@
       <option name="presentableId" value="Default" />
       <updated>1675374013338</updated>
       <workItem from="1675374015044" duration="4207000" />
-      <workItem from="1675378238240" duration="5030000" />
+      <workItem from="1675378238240" duration="9110000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <created>1675406927760</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1675406927760</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added exception handler">
+      <created>1675408820872</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1675408820872</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Validate create customer request data">
+      <created>1675408909781</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1675408909781</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,5 +209,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit" />
+    <MESSAGE value="Added exception handler" />
+    <MESSAGE value="Validate create customer request data" />
+    <option name="LAST_COMMIT_MESSAGE" value="Validate create customer request data" />
   </component>
 </project>

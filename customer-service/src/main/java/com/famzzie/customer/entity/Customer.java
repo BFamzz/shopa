@@ -21,7 +21,7 @@ import java.time.ZonedDateTime;
 @NoArgsConstructor
 @Entity(name = "Customer")
 @Table(name = "customer", uniqueConstraints = {
-        @UniqueConstraint(name = "customer_email_unique",
+        @UniqueConstraint(name = "customer_unique",
                 columnNames = {"email", "phone_number"})
 })
 public class Customer {
