@@ -4,14 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62ad38aa-38a7-430f-90de-c258fa24ca3f" name="Changes" comment="Validate create customer request data">
-      <change afterPath="$PROJECT_DIR$/customer-service/src/main/java/com/famzzie/customer/api/response/GetCustomerResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer-service/src/main/java/com/famzzie/customer/exception/types/CustomerNotFoundException.java" afterDir="false" />
+    <list default="true" id="62ad38aa-38a7-430f-90de-c258fa24ca3f" name="Changes" comment="Impl get customer feature">
+      <change afterPath="$PROJECT_DIR$/exception/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exception/src/main/java/com/famzzie/exception/ApiException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exception/src/main/java/com/famzzie/exception/ExceptionApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/famzzie/inventory/api/InventoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/famzzie/inventory/api/request/CreateInventoryRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/famzzie/inventory/api/response/CreateInventoryResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/famzzie/inventory/entity/Inventory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/famzzie/inventory/exception/ApiExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/famzzie/inventory/exception/types/InvalidInventoryQuantityException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/famzzie/inventory/interfaces/InventoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/famzzie/inventory/repository/InventoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/famzzie/inventory/service/InventoryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/com/famzzie/customer/api/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/com/famzzie/customer/api/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/com/famzzie/customer/entity/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/com/famzzie/customer/entity/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/com/famzzie/customer/interfaces/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/com/famzzie/customer/interfaces/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/com/famzzie/customer/service/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/com/famzzie/customer/service/CustomerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/com/famzzie/customer/exception/ApiException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/com/famzzie/customer/exception/ApiExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/com/famzzie/customer/exception/ApiExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/famzzie/inventory/InventoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/famzzie/inventory/InventoryServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,9 +38,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Record" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Record" />
       </list>
     </option>
   </component>
@@ -74,6 +88,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.famzzie.inventory.api.request" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\famut\IdeaProjects\shopa" />
     </key>
@@ -85,7 +102,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.OrderService">
+  <component name="RunManager" selected="Spring Boot.InventoryServiceApplication">
     <configuration name="CartService" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="cart-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.famzzie.cart.CartService" />
@@ -125,9 +142,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InventoryService" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="InventoryServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="inventory-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.famzzie.inventory.InventoryService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.famzzie.inventory.InventoryServiceApplication" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.famzzie.inventory.*" />
@@ -153,10 +170,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.InventoryServiceApplication" />
         <item itemvalue="Spring Boot.CustomerServiceApplication" />
         <item itemvalue="Spring Boot.OrderService" />
         <item itemvalue="Spring Boot.CartService" />
-        <item itemvalue="Spring Boot.InventoryService" />
         <item itemvalue="Spring Boot.CatalogServiceApplication" />
       </list>
     </recent_temporary>
@@ -170,7 +187,7 @@
       <option name="presentableId" value="Default" />
       <updated>1675374013338</updated>
       <workItem from="1675374015044" duration="4207000" />
-      <workItem from="1675378238240" duration="9110000" />
+      <workItem from="1675378238240" duration="13939000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1675406927760</created>
@@ -193,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675408909781</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Impl get customer feature">
+      <created>1675412376297</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1675412376297</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,6 +238,7 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Added exception handler" />
     <MESSAGE value="Validate create customer request data" />
-    <option name="LAST_COMMIT_MESSAGE" value="Validate create customer request data" />
+    <MESSAGE value="Impl get customer feature" />
+    <option name="LAST_COMMIT_MESSAGE" value="Impl get customer feature" />
   </component>
 </project>

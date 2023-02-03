@@ -8,3 +8,14 @@ spring:
     consul:
       discovery:
         prefer-ip-address: true
+  datasource:
+    username: root
+    password: secret
+    url: jdbc:postgresql://localhost:5432/inventory
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    hibernate:
+      ddl-auto: update
