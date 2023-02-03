@@ -1,0 +1,10 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: cart-service
+  cloud:
+    consul:
+      discovery:
+        prefer-ip-address: true
