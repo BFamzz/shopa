@@ -1,7 +1,7 @@
 package com.famzzie.inventory.exception;
 
 import com.famzzie.exception.ApiException;
-import com.famzzie.inventory.exception.types.InvalidInventoryQuantityException;
+import com.famzzie.inventory.exception.types.InvalidInventoryException;
 import com.famzzie.inventory.exception.types.InvalidPaginationParamException;
 import com.famzzie.inventory.exception.types.InventoryNotFoundException;
 import lombok.extern.slf4j.Slf4j;
@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 @ControllerAdvice
 public class ApiExceptionHandler {
 
-    @ExceptionHandler(value = InvalidInventoryQuantityException.class)
+    @ExceptionHandler(value = InvalidInventoryException.class)
     public ResponseEntity<ApiException> invalidInventoryQuantityException(
-            InvalidInventoryQuantityException exception) {
+            InvalidInventoryException exception) {
         ApiException apiException = new ApiException(false, exception.getMessage());
         log.error(exception.getMessage());
         return new ResponseEntity<>(apiException, HttpStatus.BAD_REQUEST);

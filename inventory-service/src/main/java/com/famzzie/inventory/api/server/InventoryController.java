@@ -1,4 +1,4 @@
-package com.famzzie.inventory.api;
+package com.famzzie.inventory.api.server;
 
 import com.famzzie.inventory.api.request.CreateInventoryRequest;
 import com.famzzie.inventory.api.request.GetInventoryRequest;

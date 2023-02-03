@@ -13,6 +13,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
 import java.time.ZonedDateTime;
 
 @Data
@@ -41,6 +42,9 @@ public class Customer {
 
     @Column(name = "email", nullable = false, columnDefinition = "VARCHAR(50)")
     private String email;
+
+    @Column(name = "balance", nullable = false, columnDefinition = "NUMERIC(10,2) DEFAULT 0.00")
+    private BigDecimal balance;
 
     @Column(name = "phone_number", nullable = false, columnDefinition = "VARCHAR(15)")
     private String phoneNumber;

@@ -1,5 +1,8 @@
 package com.famzzie.customer.service;
 
+import com.famzzie.clients.cart.CartClient;
+import com.famzzie.clients.cart.request.CreateCartRequest;
+import com.famzzie.clients.cart.response.CreateCartResponse;
 import com.famzzie.customer.api.request.CreateCustomerRequest;
 import com.famzzie.customer.api.response.CreateCustomerResponse;
 import com.famzzie.customer.api.response.GetCustomerResponse;
@@ -12,6 +15,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.time.ZonedDateTime;
 import java.util.Optional;
 
@@ -20,6 +24,8 @@ import java.util.Optional;
 public class CustomerServiceImpl implements CustomerService {
 
     private final CustomerRepository customerRepository;
+
+    private final CartClient cartClient;
 
     private boolean validateCreateCustomerRequestBody(CreateCustomerRequest createCustomerRequest) {
         int NAME_LENGTH = 50;
@@ -41,6 +47,7 @@ public class CustomerServiceImpl implements CustomerService {
                 .firstName(createCustomerRequest.firstName())
                 .lastName(createCustomerRequest.lastName())
                 .email(createCustomerRequest.email())
+                .balance(new BigDecimal("0.00"))
                 .phoneNumber(createCustomerRequest.phoneNumber())
                 .createdAt(ZonedDateTime.now())
                 .build();
@@ -51,8 +58,12 @@ public class CustomerServiceImpl implements CustomerService {
                     "Please try again");
         }
 
-        return new CreateCustomerResponse(Boolean.TRUE,
-                "Account created successfully", newCustomer.getId());
+        CreateCartResponse createCartResponse = cartClient.createCart(
+                new CreateCartRequest(newCustomer.getId())
+        );
+
+        return new CreateCustomerResponse(true,"Account created successfully",
+                newCustomer.getId());
     }
 
     @Override

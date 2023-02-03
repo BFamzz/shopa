@@ -1,7 +1,7 @@
 package com.famzzie.customer.api.response;
 
 public record CreateCustomerResponse(
-        Boolean success,
+        boolean success,
         String message,
         Long accountId
 ) {

@@ -6,7 +6,7 @@ import com.famzzie.inventory.api.response.CreateInventoryResponse;
 import com.famzzie.inventory.api.response.GetInventoryByIdResponse;
 import com.famzzie.inventory.api.response.GetInventoryResponse;
 import com.famzzie.inventory.entity.Inventory;
-import com.famzzie.inventory.exception.types.InvalidInventoryQuantityException;
+import com.famzzie.inventory.exception.types.InvalidInventoryException;
 import com.famzzie.inventory.exception.types.InvalidPaginationParamException;
 import com.famzzie.inventory.exception.types.InventoryNotFoundException;
 import com.famzzie.inventory.interfaces.InventoryService;
@@ -16,6 +16,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.Optional;
 
@@ -28,11 +29,13 @@ public class InventoryServiceImpl implements InventoryService {
     @Override
     public CreateInventoryResponse createInventory(CreateInventoryRequest createInventoryRequest) {
 
-        if (createInventoryRequest.quantity() < 1)
-            throw new InvalidInventoryQuantityException("Quantity should not be zero");
+        if (createInventoryRequest.quantity() < 1 ||
+            createInventoryRequest.amount().compareTo(new BigDecimal("1.00")) < 0)
+            throw new InvalidInventoryException("Quantity and amount should be greater than zero");
 
         Inventory inventory = Inventory.builder()
                 .name(createInventoryRequest.name())
+                .amount(createInventoryRequest.amount())
                 .quantity(createInventoryRequest.quantity())
                 .createdAt(LocalDateTime.now())
                 .updatedAt(LocalDateTime.now())

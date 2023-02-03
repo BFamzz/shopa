@@ -13,6 +13,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Data
@@ -35,6 +36,9 @@ public class Inventory {
             columnDefinition = "TEXT"
     )
     private String name;
+
+    @Column(name = "amount", nullable = false, columnDefinition = "NUMERIC(30,2) DEFAULT 0.00")
+    private BigDecimal amount;
 
     @Column(name = "quantity", nullable = false, columnDefinition = "BIGINT")
     private Long quantity;
