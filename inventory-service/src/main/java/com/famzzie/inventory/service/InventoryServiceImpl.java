@@ -3,10 +3,12 @@ package com.famzzie.inventory.service;
 import com.famzzie.inventory.api.request.CreateInventoryRequest;
 import com.famzzie.inventory.api.request.GetInventoryRequest;
 import com.famzzie.inventory.api.response.CreateInventoryResponse;
+import com.famzzie.inventory.api.response.GetInventoryByIdResponse;
 import com.famzzie.inventory.api.response.GetInventoryResponse;
 import com.famzzie.inventory.entity.Inventory;
 import com.famzzie.inventory.exception.types.InvalidInventoryQuantityException;
 import com.famzzie.inventory.exception.types.InvalidPaginationParamException;
+import com.famzzie.inventory.exception.types.InventoryNotFoundException;
 import com.famzzie.inventory.interfaces.InventoryService;
 import com.famzzie.inventory.repository.InventoryRepository;
 import lombok.RequiredArgsConstructor;
@@ -15,6 +17,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.Optional;
 
 @RequiredArgsConstructor
 @Service
@@ -54,5 +57,18 @@ public class InventoryServiceImpl implements InventoryService {
         Page<Inventory> inventoryPageList = inventoryRepository.findAll(pageRequest);
         return new GetInventoryResponse(true, "Inventory gotten",
                 inventoryPageList.getContent());
+    }
+
+    @Override
+    public GetInventoryByIdResponse getInventoryById(long inventoryId) {
+        if (inventoryId < 1)
+            throw new InventoryNotFoundException("Inventory not found. Please try again!");
+
+        Optional<Inventory> inventory = inventoryRepository.findById(inventoryId);
+        if (inventory.isEmpty())
+            throw new InventoryNotFoundException("Inventory not found. Please try again!");
+
+        return new GetInventoryByIdResponse(true, "Inventory retrieved",
+                inventory.get());
     }
 }

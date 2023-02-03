@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62ad38aa-38a7-430f-90de-c258fa24ca3f" name="Changes" comment="Extracted exception into a separate module">
-      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/famzzie/inventory/api/request/GetInventoryRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/famzzie/inventory/api/response/GetInventoryResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/famzzie/inventory/exception/types/InvalidPaginationParamException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="62ad38aa-38a7-430f-90de-c258fa24ca3f" name="Changes" comment="Get inventory items with pagination">
+      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/famzzie/inventory/api/response/GetInventoryByIdResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/famzzie/inventory/exception/types/InventoryNotFoundException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/famzzie/inventory/api/InventoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/famzzie/inventory/api/InventoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/famzzie/inventory/entity/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/famzzie/inventory/entity/Inventory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/famzzie/inventory/exception/ApiExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/famzzie/inventory/exception/ApiExceptionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/famzzie/inventory/interfaces/InventoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/famzzie/inventory/interfaces/InventoryService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/famzzie/inventory/service/InventoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/famzzie/inventory/service/InventoryServiceImpl.java" afterDir="false" />
     </list>
@@ -76,6 +74,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.famzzie.inventory.exception.types" />
       <recent name="com.famzzie.inventory.api.response" />
       <recent name="com.famzzie.inventory.api.request" />
     </key>
@@ -175,7 +174,7 @@
       <option name="presentableId" value="Default" />
       <updated>1675374013338</updated>
       <workItem from="1675374015044" duration="4207000" />
-      <workItem from="1675378238240" duration="17465000" />
+      <workItem from="1675378238240" duration="18747000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1675406927760</created>
@@ -212,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675421569353</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Get inventory items with pagination">
+      <created>1675425468581</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1675425468581</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,6 +241,7 @@
     <MESSAGE value="Validate create customer request data" />
     <MESSAGE value="Impl get customer feature" />
     <MESSAGE value="Extracted exception into a separate module" />
-    <option name="LAST_COMMIT_MESSAGE" value="Extracted exception into a separate module" />
+    <MESSAGE value="Get inventory items with pagination" />
+    <option name="LAST_COMMIT_MESSAGE" value="Get inventory items with pagination" />
   </component>
 </project>
